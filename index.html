@@ -37,11 +37,31 @@
     }
     #TableOfContents {
       background-color: white;
-      colour: black;
+      color: black;
       padding: 20px;
       border-radius: 8px;
       margin: @ auto;
     }
+    #TableOfContents table {
+    width: 100%;
+    border-collapse: collapse;
+    }
+    
+    #TableOfContents th {
+        padding: 10px;
+        border: 1px solid black;
+        text-align: left;
+        font-weight: normal;
+    }
+    
+    #TableOfContents th a {
+        color: black;
+        text-decoration: none;
+    }
+    
+    #TableOfContents th a:hover {
+        text-decoration: underline;
+    }    
     </style>
     
   <center> <img src ="surrey logo.png" alt="Banner" width="900" height="300"> </center>
@@ -52,18 +72,32 @@
     <hr>
     
     <div id="TableOfContents">
-    <h3>Table of Contents</h3>
-    <ul>
-        <li><a href="#abstract">Abstract</a></li>
-        <li><a href="#introduction">Introduction</a></li>
-        <li><a href="#importance">Why is Space Weather important?</a></li>
-        <li><a href="#humans">Why is Space Weather important to humans?</a></li>
-        <li><a href="#history">Notable Occurrences in History Involving Space Weather</a></li>
-        <li><a href="#conclusion">Conclusion of Importance of Space Weather</a></li>
-        <li><a href="#references">Reference List</a></li>
-    </ul>
+        <h3>Table of Contents</h3>
+        <table style="width:100%; border-collapse: collapse; text-align: left;">
+            <tr>
+                <th><a href="#abstract">Abstract</a></th>
+            </tr>
+            <tr>
+                <th><a href="#introduction">Introduction</a></th>
+            </tr>
+            <tr>
+                <th><a href="#importance">Why is Space Weather important?</a></th>
+            </tr>
+            <tr>
+                <th><a href="#humans">Why is Space Weather important to humans?</a></th>
+            </tr>
+            <tr>
+                <th><a href="#history">Notable Occurrences in History Involving Space Weather</a></th>
+            </tr>
+            <tr>
+                <th><a href="#conclusion">Conclusion of Importance of Space Weather</a></th>
+            </tr>
+            <tr>
+                <th><a href="#references">Reference List</a></th>
+            </tr>
+        </table>
     </div>
-    
+
     <hr>
     <div id="maininfo">
     <h2 id="abstract"><b><u>Abstract</u></b></h2>
@@ -109,6 +143,7 @@
     <center> <video src="What is the importance of Space Weather.mp4" width="800" height="450" controls> </video> </center>
 
     <hr>
+    
   <div id="references">
     <center><h3><b><U> Reference List </U></b></h3></center>
     <a href="https://pweb.cfa.harvard.edu/research/topic/space-weather#:~:text=One%20major%20reason%20to%20study,%2C%20transportation%2C%20and%20communication%20networks.">Center for Astrophysics, Hardvard & Smithsonian (n.d.), Space Weather, Date Accessed 16/11/24</a>
