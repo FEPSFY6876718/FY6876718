@@ -158,9 +158,7 @@
     <p><a href="https://en.wikipedia.org/wiki/May_1921_geomagnetic_storm"> Wikipedia(10/07/24) - May 1921 Geomagnetic Storm, Date Accessed 23/11/24</a></p>
     <p><a href="https://en.wikipedia.org/wiki/May_2024_solar_storms"> Wikipedia (20/11/24) - May 2024 Solar Storm, Date Accessed 23/11/24</a></p>
     
-
-
-    <!-- //////////////////////////////////////////////////////////////////////////////// -->
+<!-- //////////////////////////////////////////////////////////////////////////////// -->
   <!-- ////////////////////////////// Adding last update ////////////////////////////// -->
   <!-- //////////////////////////////////////////////////////////////////////////////// -->
     <!-- Last commit time display -->
@@ -171,10 +169,10 @@
 </button>
 <script>
     async function getLastUpdatedTime() {
-        const username = 'FEPSFY6876718';
-        const repo = 'FY6876718';
+        const username = 'nr0025';
+        const repo = 'FY0025';
        
-        const url = https://api.github.com/repos/${username}/${repo}/commits;
+        const url = `https://api.github.com/repos/${username}/${repo}/commits`;
         try {
             const response = await fetch(url, {
                 method: 'GET',
@@ -183,14 +181,14 @@
                 }
             });
             if (!response.ok) {
-                throw new Error(Error fetching data: ${response.status} - ${response.statusText});
+                throw new Error(`Error fetching data: ${response.status} - ${response.statusText}`);
             }
             const commits = await response.json();
             if (commits && commits.length > 0) {
                 const lastCommitDate = new Date(commits[0].commit.committer.date);
                
                 // Displaying the time on load
-                document.getElementById('last-updated').innerText = Last Modified Time: ${lastCommitDate.toLocaleString()};
+                document.getElementById('last-updated').innerText = `Last Modified Time: ${lastCommitDate.toLocaleString()}`;
             } else {
                 document.getElementById('last-updated').innerText = 'No commits found in the repository.';
             }
@@ -205,7 +203,9 @@
         await getLastUpdatedTime();
         alert("Last modified time has been successfully verified from GitHub API.");
     }
-    // Initial load to display the time on page load
+    
+  
+  // Initial load to display the time on page load
     window.onload = getLastUpdatedTime;
 </script>
 
@@ -236,7 +236,7 @@
     // Calculate the sum of all selected sections
     const totalWordCount = IntroductionCount + AnalysisCount;
     // Display the total word count
-    document.getElementById("totalWordCount").innerText = Total word count: ${totalWordCount};
+    document.getElementById("totalWordCount").innerText = `Total word count: ${totalWordCount}`;
   }
   // Run the function for specific sections and display total count when the page loads
   window.onload = displayTotalWordCount;
